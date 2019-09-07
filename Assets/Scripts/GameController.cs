@@ -16,11 +16,6 @@ public class GameController : MonoBehaviour
     [SerializeField] PlayerController player2;
 
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     private void Start()
     {
         StartCoroutine(SetGameOver());
@@ -28,6 +23,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator SetGameOver()
     {
+        yield return new WaitForSeconds(10);
         while(true)
         {
             if (player1.isTimeOut && player2.isTimeOut)
@@ -35,22 +31,7 @@ public class GameController : MonoBehaviour
                 gameOverEvent.Raise();
                 yield break;
             }
-            else if(player1.isTimeOut)
-            {
-                if (player2.player.score > player1.player.score)
-                {
-                    gameOverEvent.Raise();
-                    yield break;
-                }
-            }
-            else if(player2.isTimeOut)
-            {
-                if (player1.player.score > player2.player.score)
-                {
-                    gameOverEvent.Raise();
-                    yield break;
-                }
-            }
+            yield return null;
         }
     }
     

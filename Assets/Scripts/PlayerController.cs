@@ -33,18 +33,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Restart()
+    public void Restart()
     {
         player.time = 60;
         isEnabled = true;
         isTimeOut = false;
         StartCoroutine(StartTimer());
         timerEvent.Raise();
-    }
-
-    private void Reset()
-    {
-        
     }
 
     IEnumerator StartTimer()
@@ -103,17 +98,5 @@ public class PlayerController : MonoBehaviour
         {
 
         }
-    }
-
-    private void OnPause()
-    {
-        isEnabled = false;
-        StopCoroutine(StartTimer());
-    }
-
-    private void OnResume()
-    {
-        isEnabled = true;
-        StartCoroutine(StartTimer());
     }
 }

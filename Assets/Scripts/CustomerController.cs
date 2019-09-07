@@ -17,7 +17,7 @@ public class CustomerController : MonoBehaviour
         Restart();
     }
 
-    void Restart()
+    public void Restart()
     {
         StartCoroutine(StartSpawningCustomers());
     }
@@ -145,6 +145,7 @@ public class CustomerController : MonoBehaviour
             customerTimerUI[i].gameObject.SetActive(false);
             customerSpriteRenderers[i].gameObject.SetActive(false);
         }
+        availableTables = new List<int>() { 0, 1, 2, 3, 4, 5 };
     }
 
     private void OnRetry()
