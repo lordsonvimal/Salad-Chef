@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3d171af0cb90bd478d87aee204516b3, type: 3}
-  m_Name: Player1
+  m_Script: {fileID: 11500000, guid: e7314a55b775647489c28d8f278ea745, type: 3}
+  m_Name: Strawberry
   m_EditorClassIdentifier: 
-  name: Player1
-  state: 0
-  score: 0
-  time: 0
-  speed: 7
+  name: Strawberry
+  sprite: {fileID: 21300000, guid: d915868abbbdcff49829c02087b5f8db, type: 3}
+  chopTime: 0.1

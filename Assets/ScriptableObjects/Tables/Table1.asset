@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b32f2f50c14e8346a936726bed02ec2, type: 3}
+  m_Name: Table1
+  m_EditorClassIdentifier: 
+  customer: {fileID: 11400000, guid: 10c44c062987bf94ab85466c8757de69, type: 2}
+  isOccupied: 0
+  tableNo: 1
+  tableSpriteRenderer: {fileID: 0}
+  customerLeftEvent: {fileID: 11400000, guid: fe393d314eb714e4a8419036ca966674, type: 2}

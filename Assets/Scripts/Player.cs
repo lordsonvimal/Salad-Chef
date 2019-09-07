@@ -8,8 +8,4 @@ public class Player : ScriptableObject
     public int score;
     public int time;
     public float speed;
-
-    public void Move(Vector2 pos)
-    {
-    }
 }

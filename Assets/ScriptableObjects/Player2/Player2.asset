@@ -15,5 +15,5 @@ MonoBehaviour:
   name: Player2
   state: 0
   score: 0
-  time: 20
-  speed: 5
+  time: 0
+  speed: 7

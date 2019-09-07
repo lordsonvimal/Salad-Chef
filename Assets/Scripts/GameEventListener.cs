@@ -3,10 +3,8 @@ using UnityEngine.Events;
 
 public class GameEventListener : MonoBehaviour
 {
-    [SerializeField]
-    private GameEvent gameEvent;
-    [SerializeField]
-    private UnityEvent response;
+    public GameEvent gameEvent;
+    public UnityEvent response;
 
     private void OnEnable()
     {
