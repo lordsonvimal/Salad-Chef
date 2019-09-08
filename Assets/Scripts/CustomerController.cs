@@ -38,7 +38,7 @@ public class CustomerController : MonoBehaviour
         {
             if(availableTables.Count > 0)
             {
-                int tableindex = Random.Range(0, availableTables.Count - 1);
+                int tableindex = Random.Range(0, availableTables.Count);
                 Customer cust = tables[availableTables[tableindex]].customer;
                 if (cust)
                 {
@@ -71,11 +71,11 @@ public class CustomerController : MonoBehaviour
     {
         List<Ingredient> ings = new List<Ingredient>();
         List<Ingredient> tempIngredients = new List<Ingredient>(ingredients);
-        int numberOfIngredients = Random.Range(1, maxIngredients);
+        int numberOfIngredients = Random.Range(1, maxIngredients+1);
         int index;
         for (int i = 0; i < numberOfIngredients; i++)
         {
-            index = Random.Range(0, tempIngredients.Count-1);
+            index = Random.Range(0, tempIngredients.Count);
             ings.Add(tempIngredients[index]);
             tempIngredients.RemoveAt(index);
         }

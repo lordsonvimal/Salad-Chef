@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public Player player;
     public GameEvent timerEvent;
     private new Rigidbody2D rigidbody2D;
-    [SerializeField]bool isEnabled;
+    public bool isEnabled;
     public bool isTimeOut;
     Vector2 pos;
     float speed;
@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
         if (isEnabled)
         {
             Move();
-            Interact();
         }
     }
 
@@ -90,13 +89,5 @@ public class PlayerController : MonoBehaviour
     private void MovePosition(Vector2 position)
     {
         rigidbody2D.MovePosition(position);
-    }
-
-    private void Interact()
-    {
-        if (Input.GetKey(inputHandler.interact))
-        {
-
-        }
     }
 }

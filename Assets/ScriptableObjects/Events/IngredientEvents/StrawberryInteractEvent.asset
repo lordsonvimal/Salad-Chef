@@ -9,11 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3d171af0cb90bd478d87aee204516b3, type: 3}
-  m_Name: Player1
+  m_Script: {fileID: 11500000, guid: b53145315b786a840a145e70ffef1629, type: 3}
+  m_Name: StrawberryInteractEvent
   m_EditorClassIdentifier: 
-  name: Player1
-  state: 0
-  score: 0
-  time: 55
-  speed: 7
