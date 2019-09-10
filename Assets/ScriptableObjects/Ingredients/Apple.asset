@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Apple
   sprite: {fileID: 21300000, guid: 0983d169172589e489b65179f2d13348, type: 3}
-  chopTime: 0.1
+  chopTime: 1
+  pickUpTime: 5

@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
         StartCoroutine(SetGameOver());
     }
 
+    // Set Game Over
     IEnumerator SetGameOver()
     {
         yield return new WaitForSeconds(10);
@@ -32,18 +33,6 @@ public class GameController : MonoBehaviour
                 yield break;
             }
             yield return null;
-        }
-    }
-    
-    private void Update()
-    {
-        if(Input.GetKeyDown(pause))
-        {
-            isPaused = !isPaused;
-            if (isPaused)
-                pauseEvent.Raise();
-            else
-                resumeEvent.Raise();
         }
     }
 

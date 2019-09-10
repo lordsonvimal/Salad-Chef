@@ -10,7 +10,6 @@ public class CustomerController : MonoBehaviour
     [SerializeField] List<Image> customerTimerUI = new List<Image>();
     [SerializeField]List<Table> tables = new List<Table>();
     [SerializeField]List<Ingredient> ingredients = new List<Ingredient>();
-    [SerializeField]List<GameEventListener> customerLeftListeners;
     [SerializeField]int maxIngredients;
     private void Start()
     {
@@ -31,6 +30,7 @@ public class CustomerController : MonoBehaviour
         }
     }
 
+    // Spawn Customers in Random Tables
     void SpawnRandomCustomers()
     {
         int noOfCustomers = Random.Range(1, availableTables.Count);
@@ -43,13 +43,13 @@ public class CustomerController : MonoBehaviour
                 if (cust)
                 {
                     cust.ingredients.Clear();
-                    cust.waitTime = 12;
-                    cust.originalTime = 12;
+                    cust.waitTime = 20;
+                    cust.originalTime = 20;
                     cust.ingredients.Clear();
                     cust.ingredients = GetRandomIngredients();
                     foreach(Ingredient ing in tables[availableTables[tableindex]].customer.ingredients)
                     {
-                        cust.waitTime += ing.chopTime;
+                        cust.waitTime += ing.pickUpTime;
                         cust.originalTime = tables[availableTables[tableindex]].customer.waitTime;
                     }
                     CreateSpriteRenderer(cust, availableTables[tableindex]);
@@ -67,6 +67,7 @@ public class CustomerController : MonoBehaviour
         }
     }
 
+    // Return List of Random Ingredients for each Customer
     List<Ingredient> GetRandomIngredients()
     {
         List<Ingredient> ings = new List<Ingredient>();
@@ -123,12 +124,20 @@ public class CustomerController : MonoBehaviour
         }
     }
 
+    // Destroy ingredients for a particular table
     void DestroyIngredients(int index)
     {
         foreach(Transform t in customerSpriteRenderers[index].transform.GetChild(0).transform)
         {
             Destroy(t.gameObject);
         }
+    }
+
+    public void CustomerServerSuccessfully(int index)
+    {
+        DestroyIngredients(index);
+        customerTimerUI[index].gameObject.SetActive(false);
+        customerSpriteRenderers[index].gameObject.SetActive(false);
     }
 
     private void OnPause()

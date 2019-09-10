@@ -16,4 +16,5 @@ MonoBehaviour:
   back: 274
   left: 276
   right: 275
-  interact: 271
+  interact: 256
+  chop: 271

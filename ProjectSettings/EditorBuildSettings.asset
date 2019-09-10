@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Salad-Chef.unity
     guid: cc5c44b356f51cd4588c460694ede7e4
+  - enabled: 1
+    path: Assets/Scenes/PlayerControls.unity
+    guid: 6a585c9adc985d048b339f858ad817d6
+  - enabled: 1
+    path: Assets/Scenes/Rules.unity
+    guid: 45e0154a04c8a4541bfe02ed632ce509
   m_configObjects: {}

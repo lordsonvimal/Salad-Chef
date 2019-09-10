@@ -34,7 +34,8 @@ public class PlayerController : MonoBehaviour
 
     public void Restart()
     {
-        player.time = 60;
+        player.time = 100;
+        player.score = 0;
         isEnabled = true;
         isTimeOut = false;
         StartCoroutine(StartTimer());

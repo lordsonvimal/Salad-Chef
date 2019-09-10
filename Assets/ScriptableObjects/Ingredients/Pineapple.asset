@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Pineapple
   sprite: {fileID: 21300000, guid: 3c728845e6f3e684c88f3757ffe4c4ed, type: 3}
-  chopTime: 0.1
+  chopTime: 1
+  pickUpTime: 5

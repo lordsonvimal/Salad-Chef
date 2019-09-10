@@ -8,4 +8,5 @@ public class InputHandler : ScriptableObject
     public KeyCode left;
     public KeyCode right;
     public KeyCode interact;
+    public KeyCode chop;
 }

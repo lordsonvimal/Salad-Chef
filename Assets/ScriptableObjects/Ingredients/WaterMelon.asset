@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Water Melon
   sprite: {fileID: 21300000, guid: 65fd4aed3d6ae4e43b14a96e78856c6d, type: 3}
-  chopTime: 0.1
+  chopTime: 1
+  pickUpTime: 5
